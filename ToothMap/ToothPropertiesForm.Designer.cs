@@ -35,6 +35,7 @@
             this.ToothCariesLabel = new System.Windows.Forms.Label();
             this.CommentsLabel = new System.Windows.Forms.Label();
             this.CommentsTextBox = new System.Windows.Forms.TextBox();
+            this.ToothNumber = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SaveButton
@@ -53,7 +54,7 @@
             // 
             this.ToothReplacedLabel.AutoSize = true;
             this.ToothReplacedLabel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ToothReplacedLabel.Location = new System.Drawing.Point(12, 9);
+            this.ToothReplacedLabel.Location = new System.Drawing.Point(12, 58);
             this.ToothReplacedLabel.Name = "ToothReplacedLabel";
             this.ToothReplacedLabel.Size = new System.Drawing.Size(153, 26);
             this.ToothReplacedLabel.TabIndex = 1;
@@ -64,7 +65,7 @@
             this.ToothReplacedCheckBox.AutoSize = true;
             this.ToothReplacedCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ToothReplacedCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ToothReplacedCheckBox.Location = new System.Drawing.Point(171, 10);
+            this.ToothReplacedCheckBox.Location = new System.Drawing.Point(171, 59);
             this.ToothReplacedCheckBox.Name = "ToothReplacedCheckBox";
             this.ToothReplacedCheckBox.Size = new System.Drawing.Size(60, 27);
             this.ToothReplacedCheckBox.TabIndex = 2;
@@ -76,7 +77,7 @@
             this.ToothCariesCheckBox.AutoSize = true;
             this.ToothCariesCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ToothCariesCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ToothCariesCheckBox.Location = new System.Drawing.Point(171, 46);
+            this.ToothCariesCheckBox.Location = new System.Drawing.Point(171, 98);
             this.ToothCariesCheckBox.Name = "ToothCariesCheckBox";
             this.ToothCariesCheckBox.Size = new System.Drawing.Size(60, 27);
             this.ToothCariesCheckBox.TabIndex = 4;
@@ -87,7 +88,7 @@
             // 
             this.ToothCariesLabel.AutoSize = true;
             this.ToothCariesLabel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ToothCariesLabel.Location = new System.Drawing.Point(12, 45);
+            this.ToothCariesLabel.Location = new System.Drawing.Point(12, 97);
             this.ToothCariesLabel.Name = "ToothCariesLabel";
             this.ToothCariesLabel.Size = new System.Drawing.Size(127, 26);
             this.ToothCariesLabel.TabIndex = 3;
@@ -97,7 +98,7 @@
             // 
             this.CommentsLabel.AutoSize = true;
             this.CommentsLabel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CommentsLabel.Location = new System.Drawing.Point(12, 99);
+            this.CommentsLabel.Location = new System.Drawing.Point(346, 108);
             this.CommentsLabel.Name = "CommentsLabel";
             this.CommentsLabel.Size = new System.Drawing.Size(110, 26);
             this.CommentsLabel.TabIndex = 5;
@@ -113,12 +114,23 @@
             this.CommentsTextBox.Size = new System.Drawing.Size(441, 162);
             this.CommentsTextBox.TabIndex = 6;
             // 
+            // ToothNumber
+            // 
+            this.ToothNumber.AutoSize = true;
+            this.ToothNumber.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ToothNumber.Location = new System.Drawing.Point(12, 9);
+            this.ToothNumber.Name = "ToothNumber";
+            this.ToothNumber.Size = new System.Drawing.Size(208, 28);
+            this.ToothNumber.TabIndex = 7;
+            this.ToothNumber.Text = "Position of Tooth is ";
+            // 
             // ToothPropertiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(468, 311);
+            this.Controls.Add(this.ToothNumber);
             this.Controls.Add(this.CommentsTextBox);
             this.Controls.Add(this.CommentsLabel);
             this.Controls.Add(this.ToothCariesCheckBox);
@@ -130,7 +142,7 @@
             this.MinimizeBox = false;
             this.Name = "ToothPropertiesForm";
             this.ShowIcon = false;
-            this.Text = "ToothPropertiesForm";
+            this.Text = "Tooth properties for";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ToothPropertiesForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -146,5 +158,6 @@
         private System.Windows.Forms.Label ToothCariesLabel;
         private System.Windows.Forms.Label CommentsLabel;
         private System.Windows.Forms.TextBox CommentsTextBox;
+        private System.Windows.Forms.Label ToothNumber;
     }
 }

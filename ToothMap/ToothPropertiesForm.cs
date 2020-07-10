@@ -12,7 +12,7 @@ namespace ToothMap
             this.tooth = tooth;
 
             InitializeComponent();
-
+            Text = "Tooth properties for " + tooth.Number.ToString() + " Tooth";
             LoadToothProperties();
         }
 
@@ -21,6 +21,7 @@ namespace ToothMap
             ToothReplacedCheckBox.Checked = tooth.IsReplaced;
             ToothCariesCheckBox.Checked = tooth.IsCaries;
             CommentsTextBox.Text = tooth.Comments;
+            ToothNumber.Text = "Position of Tooth is " + tooth.Number.ToString();
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
